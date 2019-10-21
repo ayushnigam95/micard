@@ -16,18 +16,47 @@ class MyApp extends StatelessWidget {
 //      SafeArea makes sure that the content remains in the visible
 //      Region and is not hindered by notch or navigation
         body: SafeArea(
-//        Container can only have one child
-//        Container having no child takes up all the space it can,
-//        else it takes up the shape and size of the child widget
-          child: Container(
-            color: Colors.white,
-            height: 100,
-            width: 200,
-//          EdgeInsets is used to define the linear metrics like margin
-//          padding and other stuff in context of a container
-            margin: EdgeInsets.only(left: 30),
-            padding: EdgeInsets.all(20),
-            child: Text("Hello World"),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              Container(
+                color: Colors.white,
+                height: 100,
+                width: 125,
+                margin: EdgeInsets.only(left: 30),
+                padding: EdgeInsets.all(20),
+                child: Text("Container 1"),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                color: Colors.red,
+                height: 100,
+                width: 125,
+                margin: EdgeInsets.only(left: 30),
+                padding: EdgeInsets.all(20),
+                child: Text("Container 2"),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                color: Colors.lightBlue,
+                height: 100,
+                width: 125,
+                margin: EdgeInsets.only(left: 30),
+                padding: EdgeInsets.all(20),
+                child: Text("Container 3"),
+              ),
+//_______________________________________________________________________
+//             ADD NEW CONTAINER WITH WIDTH EQUALS INFINITY TO SEE
+//            EFFECT SAME AS ALIGN RIGHT
+//_______________________________________________________________________
+              Container(
+                width: double.infinity,
+              ),
+            ],
           ),
         ),
       ),
