@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 //      Region and is not hindered by notch or navigation
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
                 color: Colors.white,
@@ -48,13 +48,6 @@ class MyApp extends StatelessWidget {
                 margin: EdgeInsets.only(left: 30),
                 padding: EdgeInsets.all(20),
                 child: Text("Container 3"),
-              ),
-//_______________________________________________________________________
-//             ADD NEW CONTAINER WITH WIDTH EQUALS INFINITY TO SEE
-//            EFFECT SAME AS ALIGN RIGHT
-//_______________________________________________________________________
-              Container(
-                width: double.infinity,
               ),
             ],
           ),
